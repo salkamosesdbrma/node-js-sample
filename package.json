@@ -7,8 +7,11 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.13.3",
-    "google-trends": "^0.1.1"
+    "google-trends": "^0.1.1",
+    "google-trends-api": "^4.4.0",
+    "node-google-search-trends": "^1.1.0"
   },
   "engines": {
     "node": "4.0.0"
