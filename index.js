@@ -9,15 +9,21 @@ app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'ejs');
 
 app.get('/test', function(request, response) {
- 
-	trends.load(['kr'], function (err, result) {
+	var country = "india";
+ 	if(request.query.country!=null)
+ 		country = request.query.country;
+
+	trends.load([country], function (err, result) {
 	  console.log(err, JSON.stringify(result))
 	  response.render('pages/test',{trends: JSON.parse(JSON.stringify(result))})
 	})
 })
 
 app.get('/', function(request, response) {
-	trends.load(['kr'], function (err, result) {
+	var country = "india";
+	if(request.query.country!=null)
+ 		country = request.query.country;
+	trends.load([country], function (err, result) {
 		response.send(JSON.parse(JSON.stringify(result)));
 	})
 })
