@@ -4,11 +4,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 jQuery(function(){
-        
         jQuery('.targetDiv').hide();
+        jQuery('.goBack').hide();
         jQuery('.showSingle').click(function(){
               jQuery('.targetDiv').hide();
+              jQuery('.menu').hide();
+              jQuery('.goBack').show();
               jQuery('#div'+$(this).attr('target')).show();
+        });
+
+        jQuery('.goBack').click(function(){
+              jQuery('.targetDiv').hide();
+              jQuery('.menu').show();
+              jQuery('.goBack').hide();
         });
 });
 </script>
@@ -179,6 +187,7 @@ jQuery(function(){
     perspective-origin: 232px 100.5px;
     transform-origin: 232px 100.5px;
     font: normal normal 400 normal 13px / normal Times;
+    padding: 5px 0px 0px;
 }/*#DIV_24*/
 
 #SPAN_25 {
@@ -347,6 +356,10 @@ jQuery(function(){
     outline: rgb(102, 102, 102) none 0px;
 }/*#B_46*/
 
+.goBack {
+    position: relative;
+    left: 8px;
+}
 
 }
 </style>
@@ -357,6 +370,8 @@ jQuery(function(){
      <a  class="showSingle" target="<%=i%>"><%= Object.values(trends)[0][i].title %></a><br/>
 <% } %>
 </div>
+
+<button class="goBack">Go back</button>
 
 <% for(var i=0; i < Object.values(trends)[0].length; i++) { %>
 <section class="cnt">
@@ -383,7 +398,7 @@ jQuery(function(){
 		<div id="DIV_24">
 			<div id="DIV_28">
 				<div id="DIV_29">
-					<a href="https://www.npr.org/2018/01/17/578568074/sen-bob-dole-to-receive-congressional-gold-medal" rel="nofollow" id="A_30"><%- Object.values(trends)[0][i].news.items[j].title%></a><span id="SPAN_33"><%- Object.values(trends)[0][i].news.items[j].source%></span>
+					<a href="https://www.npr.org/2018/01/17/578568074/sen-bob-dole-to-receive-congressional-gold-medal" rel="nofollow" id="A_30"><%- Object.values(trends)[0][i].news.items[j].title%></a><span id="SPAN_33"> <br/><%- Object.values(trends)[0][i].news.items[j].source%></span>
 					<div id="DIV_34">
 						<span id="SPAN_35"><%- Object.values(trends)[0][i].news.items[j].snippet%></span>
 					</div>

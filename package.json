@@ -4,8 +4,7 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
-    "start": "forever start --minUptime 1000 --spinSleepTime 1000 index.js",
-    "stop":  "forever stop index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "ejs": "^2.5.7",
