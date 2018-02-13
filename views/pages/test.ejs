@@ -381,7 +381,7 @@ jQuery(function(){
 	<div id="DIV_2">
 		<div id="DIV_3">
 			<div id="DIV_4">
-				<a href="https://www.npr.org/2018/01/17/578568074/sen-bob-dole-to-receive-congressional-gold-medal" rel="nofollow" title="https://www.npr.org/2018/01/17/578568074/sen-bob-dole-to-receive-congressional-gold-medal" id="A_5"></a>
+				<a href="<%= Object.values(trends)[0][i].news.link%>" rel="nofollow" title="<%= Object.values(trends)[0][i].news.link%>" id="A_5"></a>
 				<div id="DIV_6">
                     <%if(Object.values(trends)[0][i].news.picture.source){%>
 					<img src="<%= Object.values(trends)[0][i].news.picture.url%>" alt="Bob Dole" id="IMG_7" /><span id="SPAN_8"><%= Object.values(trends)[0][i].news.picture.source%></span>
@@ -398,7 +398,7 @@ jQuery(function(){
 		<div id="DIV_24">
 			<div id="DIV_28">
 				<div id="DIV_29">
-					<a href="https://www.npr.org/2018/01/17/578568074/sen-bob-dole-to-receive-congressional-gold-medal" rel="nofollow" id="A_30"><%- Object.values(trends)[0][i].news.items[j].title%></a><span id="SPAN_33"> <br/><%- Object.values(trends)[0][i].news.items[j].source%></span>
+					<a href="<%= Object.values(trends)[0][i].news.items[j].url%>" rel="nofollow" id="A_30"><%- Object.values(trends)[0][i].news.items[j].title%></a><span id="SPAN_33"> <br/><%- Object.values(trends)[0][i].news.items[j].source%></span>
 					<div id="DIV_34">
 						<span id="SPAN_35"><%- Object.values(trends)[0][i].news.items[j].snippet%></span>
 					</div>
